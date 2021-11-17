@@ -47,7 +47,7 @@ steps:
     image: plugins/docker
     settings:
         dockerfile: sbt/zulu/Dockerfile
-        repo: hilaolu/sbt:zulu 
+        repo: hilaolu/sbt
         tags: zulu
         username:
             from_secret: docker_username
