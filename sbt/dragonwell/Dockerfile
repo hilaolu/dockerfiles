@@ -1,4 +1,4 @@
-FROM phyzaitlu/jdk:dragonwell 
+FROM hilaolu/jdk:dragonwell 
 
 ARG SBT_VERSION=1.5.5
 

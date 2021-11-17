@@ -10,10 +10,47 @@ steps:
     image: plugins/docker
     settings:
         dockerfile: jdk/dragonwell/Dockerfile
-        repo: hilaolu/jdk:dragonwell 
+        repo: hilaolu/jdk 
+        tags: dragonwell
         username:
             from_secret: docker_username
         password:
             from_secret: docker_password
         
+- 
+    name: sbt:dragonwell  
+    image: plugins/docker
+    settings:
+        dockerfile: sbt/dragonwell/Dockerfile
+        repo: hilaolu/sbt 
+        tags: dragonwell
+        username:
+            from_secret: docker_username
+        password:
+            from_secret: docker_password
+
+- 
+    name: sbt:openj9  
+    image: plugins/docker
+    settings:
+        dockerfile: sbt/openj9/Dockerfile
+        repo: hilaolu/sbt 
+        tags: openj9
+        username:
+            from_secret: docker_username
+        password:
+            from_secret: docker_password
+            
+            
+- 
+    name: sbt:zulu  
+    image: plugins/docker
+    settings:
+        dockerfile: sbt/zulu/Dockerfile
+        repo: hilaolu/sbt:zulu 
+        tags: zulu
+        username:
+            from_secret: docker_username
+        password:
+            from_secret: docker_password
 
