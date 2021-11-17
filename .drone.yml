@@ -1,0 +1,19 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+
+  
+- 
+    name: jdk:dragonwell  
+    image: plugins/docker
+    settings:
+        dockerfile: jdk/dragonwell/Dockerfile
+        repo: hilaolu/jdk:dragonwell 
+        username:
+            from_secret: docker_username
+        password:
+            from_secret: docker_password
+        
+
